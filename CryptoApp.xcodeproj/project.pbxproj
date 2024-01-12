@@ -18,6 +18,8 @@
 		F3B493942B499A5200F29C5E /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B493932B499A5200F29C5E /* CoinRowView.swift */; };
 		F3B493962B499A7B00F29C5E /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B493952B499A7B00F29C5E /* PreviewProvider.swift */; };
 		F3E85D182B4E904A00419DB6 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E85D172B4E904A00419DB6 /* LocalFileManager.swift */; };
+		F3E85D1C2B4E9C3500419DB6 /* SearchBarVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E85D1B2B4E9C3500419DB6 /* SearchBarVIew.swift */; };
+		F3E85D1E2B4EA0F000419DB6 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E85D1D2B4EA0F000419DB6 /* UIApplication.swift */; };
 		F3F0D57B2B49201C002D5F88 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0D57A2B49201C002D5F88 /* Color.swift */; };
 		F3F0D5812B4920DF002D5F88 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0D5802B4920DF002D5F88 /* HomeView.swift */; };
 		F3F0D5852B4921DD002D5F88 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0D5842B4921DD002D5F88 /* CircleButtonView.swift */; };
@@ -39,6 +41,8 @@
 		F3B493932B499A5200F29C5E /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		F3B493952B499A7B00F29C5E /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		F3E85D172B4E904A00419DB6 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
+		F3E85D1B2B4E9C3500419DB6 /* SearchBarVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarVIew.swift; sourceTree = "<group>"; };
+		F3E85D1D2B4EA0F000419DB6 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		F3F0D57A2B49201C002D5F88 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F3F0D5802B4920DF002D5F88 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F3F0D5842B4921DD002D5F88 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 				F3F0D57A2B49201C002D5F88 /* Color.swift */,
 				F3B493952B499A7B00F29C5E /* PreviewProvider.swift */,
 				F375F45F2B4A3BA8003D0DFA /* Double.swift */,
+				F3E85D1D2B4EA0F000419DB6 /* UIApplication.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 			children = (
 				F3F699762B4D9C6B005BD7EA /* CoinImage */,
 				F3F0D5832B4921C6002D5F88 /* CircleButton */,
+				F3E85D1B2B4E9C3500419DB6 /* SearchBarVIew.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -268,12 +274,14 @@
 				F375F4682B4A7EBD003D0DFA /* NetworkManager.swift in Sources */,
 				F3E85D182B4E904A00419DB6 /* LocalFileManager.swift in Sources */,
 				F3B493942B499A5200F29C5E /* CoinRowView.swift in Sources */,
+				F3E85D1C2B4E9C3500419DB6 /* SearchBarVIew.swift in Sources */,
 				F375F4622B4A453B003D0DFA /* HomeViewModel.swift in Sources */,
 				F3F0D5812B4920DF002D5F88 /* HomeView.swift in Sources */,
 				F374055C2B48376400CF0E25 /* CryptoAppApp.swift in Sources */,
 				F3F0D5852B4921DD002D5F88 /* CircleButtonView.swift in Sources */,
 				F3F0D57B2B49201C002D5F88 /* Color.swift in Sources */,
 				F3F6997A2B4D9E65005BD7EA /* CoinImageServices.swift in Sources */,
+				F3E85D1E2B4EA0F000419DB6 /* UIApplication.swift in Sources */,
 				F3F0D5872B4925CF002D5F88 /* CircleButtonAnimationView.swift in Sources */,
 				F3B493962B499A7B00F29C5E /* PreviewProvider.swift in Sources */,
 				F375F4602B4A3BA8003D0DFA /* Double.swift in Sources */,
