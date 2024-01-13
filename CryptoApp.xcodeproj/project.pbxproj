@@ -14,6 +14,7 @@
 		F375F4622B4A453B003D0DFA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375F4612B4A453B003D0DFA /* HomeViewModel.swift */; };
 		F375F4652B4A5CD7003D0DFA /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375F4642B4A5CD7003D0DFA /* CoinDataService.swift */; };
 		F375F4682B4A7EBD003D0DFA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375F4672B4A7EBD003D0DFA /* NetworkManager.swift */; };
+		F3A1EBAE2B522987003D4DFB /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1EBAD2B522987003D4DFB /* Statistic.swift */; };
 		F3B493922B4998D300F29C5E /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B493912B4998D300F29C5E /* CoinModel.swift */; };
 		F3B493942B499A5200F29C5E /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B493932B499A5200F29C5E /* CoinRowView.swift */; };
 		F3B493962B499A7B00F29C5E /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B493952B499A7B00F29C5E /* PreviewProvider.swift */; };
@@ -37,6 +38,7 @@
 		F375F4612B4A453B003D0DFA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F375F4642B4A5CD7003D0DFA /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 		F375F4672B4A7EBD003D0DFA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F3A1EBAD2B522987003D4DFB /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
 		F3B493912B4998D300F29C5E /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 		F3B493932B499A5200F29C5E /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		F3B493952B499A7B00F29C5E /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				F3B493912B4998D300F29C5E /* CoinModel.swift */,
+				F3A1EBAD2B522987003D4DFB /* Statistic.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3A1EBAE2B522987003D4DFB /* Statistic.swift in Sources */,
 				F3F699782B4D9C86005BD7EA /* CoinImageView.swift in Sources */,
 				F375F4682B4A7EBD003D0DFA /* NetworkManager.swift in Sources */,
 				F3E85D182B4E904A00419DB6 /* LocalFileManager.swift in Sources */,
