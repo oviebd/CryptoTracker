@@ -8,6 +8,7 @@
 import Combine
 import Foundation
 
+
 class HomeViewModel: ObservableObject {
     @Published var statistics: [Statistic] = [
         Statistic(title: "Title 1", value: "Value", percentageChange: 1),
@@ -17,6 +18,7 @@ class HomeViewModel: ObservableObject {
     ]
 
     @Published var allCoins: [CoinModel] = []
+
     @Published var portfolioCoins: [CoinModel] = []
     @Published var searchText: String = ""
 
@@ -30,24 +32,25 @@ class HomeViewModel: ObservableObject {
     }
 
     func addSubscribers() {
-//        coinDataService.$allCoins.sink { [weak self] coins in
-//            self?.allCoins = coins
-//
-//        }.store(in: &cancellables)
 
         $searchText.combineLatest(coinDataService.$allCoins)
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
             .map(filterCoin)
             .sink { [weak self] filteredCoins in
-                self?.allCoins = filteredCoins
+                if filteredCoins.count > 0 {
+                    self?.allCoins = filteredCoins
+                }else{
+                    self?.allCoins = [DeveloperPreview.instance.coin]
+                }
+               
             }
             .store(in: &cancellables)
 
-        marketDataService.$marketData
-            .map(mapGlobalMarketData)
-            .sink { [weak self] stats in
-                self?.statistics = stats
-            }.store(in: &cancellables)
+//        marketDataService.$marketData
+//            .map(mapGlobalMarketData)
+//            .sink { [weak self] stats in
+//                self?.statistics = stats
+//            }.store(in: &cancellables)
     }
 
     private func filterCoin(text: String, coins: [CoinModel]) -> [CoinModel] {
