@@ -53,14 +53,27 @@ class HomeViewModel: ObservableObject {
 //                self?.statistics = stats
 //            }.store(in: &cancellables)
         
-//        $allCoins
-//            .combineLatest(portfolioDataService.$savedEntities)
-//            .map { (allCoins,portfolioEntities) -> [CoinModel] in
-//                
-//            }
+        $allCoins
+            .combineLatest(portfolioDataService.$savedEntities)
+            .map { (allCoins,portfolioEntities) -> [CoinModel] in
+                allCoins.compactMap { (coin) -> CoinModel? in
+                    guard let entity = portfolioEntities.first(where: {  $0.coinId == coin.id
+                    })else {
+                        return nil
+                    }
+                    return coin.updateHoldings(amount: entity.amount)
+                }
+            }
+            .sink { [weak self] coins in
+                self?.portfolioCoins = coins
+            }.store(in: &cancellables)
         
     }
 
+    
+    func updatePortfolio(coin : CoinModel, amount : Double){
+        portfolioDataService.updatePortfolio(coin: coin, amount: amount)
+    }
     private func filterCoin(text: String, coins: [CoinModel]) -> [CoinModel] {
         guard !text.isEmpty else {
             return coins
