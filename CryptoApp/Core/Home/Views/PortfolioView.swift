@@ -35,6 +35,11 @@ struct PortfolioView: View {
                     trailingNavbarItem
                 }
             })
+            .onChange(of: vm.searchText) { newValue in
+                if newValue.isEmpty {
+                    removeSelectedCoin()
+                }
+            }
         }
     }
 
