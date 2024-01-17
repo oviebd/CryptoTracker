@@ -47,11 +47,11 @@ class HomeViewModel: ObservableObject {
             }
             .store(in: &cancellables)
 
-//        marketDataService.$marketData
-//            .map(mapGlobalMarketData)
-//            .sink { [weak self] stats in
-//                self?.statistics = stats
-//            }.store(in: &cancellables)
+        marketDataService.$marketData
+            .map(mapGlobalMarketData)
+            .sink { [weak self] stats in
+                self?.statistics = stats
+            }.store(in: &cancellables)
         
         $allCoins
             .combineLatest(portfolioDataService.$savedEntities)
@@ -74,6 +74,7 @@ class HomeViewModel: ObservableObject {
     func updatePortfolio(coin : CoinModel, amount : Double){
         portfolioDataService.updatePortfolio(coin: coin, amount: amount)
     }
+    
     private func filterCoin(text: String, coins: [CoinModel]) -> [CoinModel] {
         guard !text.isEmpty else {
             return coins
