@@ -12,6 +12,8 @@ struct HomeView: View {
     @State private var showPortfolio: Bool = false
     @State private var showPortfolioSheetView: Bool = false
   
+    @State private var selectedCoin : CoinModel? = nil
+    @State private var showDetailView : Bool = false
 
     var body: some View {
         ZStack {
@@ -101,6 +103,11 @@ struct HomeView: View {
                 Spacer(minLength: 0)
             }
         }
+        .background(
+            NavigationLink(destination: DetailLoadingView(coin: $selectedCoin), isActive: $showDetailView, label: {
+            EmptyView()
+        })
+        )
     }
     
     
@@ -129,14 +136,7 @@ struct HomeView: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            HomeView()
-                .navigationBarHidden(true)
-        }.environmentObject(dev.homeVm)
-    }
-}
+
 
 extension HomeView {
     private var headerView: some View {
@@ -171,6 +171,9 @@ extension HomeView {
             ForEach(vm.allCoins){ coin in
                 CoinRowView(coin: coin, showHoldingColumn: false)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 0, trailing: 15))
+                    .onTapGesture {
+                        segue(coin: coin)
+                    }
             }
            
         }.listStyle(PlainListStyle())
@@ -183,10 +186,26 @@ extension HomeView {
             ForEach(vm.portfolioCoins){ coin in
                 CoinRowView(coin: coin, showHoldingColumn: true)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 0, trailing: 15))
+                    .onTapGesture {
+                        segue(coin: coin)
+                    }
             }
            
         }.listStyle(PlainListStyle())
         
     }
     
+    private func segue(coin : CoinModel){
+        selectedCoin = coin
+        showDetailView.toggle()
+    }
+    
+}
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            HomeView()
+                .navigationBarHidden(true)
+        }.environmentObject(dev.homeVm)
+    }
 }
