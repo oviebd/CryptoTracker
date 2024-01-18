@@ -20,6 +20,11 @@ struct XmarkButton: View {
     }
 }
 
-#Preview {
-    XmarkButton()
+
+struct XmarkButton_Previews: PreviewProvider {
+    static var previews: some View {
+        
+        XmarkButton()
+        
+    }
 }

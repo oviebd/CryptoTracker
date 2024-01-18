@@ -83,12 +83,18 @@ struct PortfolioView: View {
     }
 }
 
-#Preview {
-    NavigationView {
-        PortfolioView()
-            .environmentObject(DeveloperPreview.instance.homeVm)
+
+struct PortfolioView_Previews: PreviewProvider {
+    static var previews: some View {
+        
+        NavigationView {
+            PortfolioView()
+                .environmentObject(DeveloperPreview.instance.homeVm)
+        }
+        
     }
 }
+
 
 extension PortfolioView {
     private var coinLogoList: some View {

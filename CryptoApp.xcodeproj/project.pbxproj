@@ -28,6 +28,7 @@
 		F3E85D182B4E904A00419DB6 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E85D172B4E904A00419DB6 /* LocalFileManager.swift */; };
 		F3E85D1C2B4E9C3500419DB6 /* SearchBarVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E85D1B2B4E9C3500419DB6 /* SearchBarVIew.swift */; };
 		F3E85D1E2B4EA0F000419DB6 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E85D1D2B4EA0F000419DB6 /* UIApplication.swift */; };
+		F3E85D412B593A4D0073E5D9 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E85D402B593A4D0073E5D9 /* HapticManager.swift */; };
 		F3EB8E262B53C1B600F91915 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB8E252B53C1B600F91915 /* PortfolioView.swift */; };
 		F3F0D57B2B49201C002D5F88 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0D57A2B49201C002D5F88 /* Color.swift */; };
 		F3F0D5812B4920DF002D5F88 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F0D5802B4920DF002D5F88 /* HomeView.swift */; };
@@ -61,6 +62,7 @@
 		F3E85D172B4E904A00419DB6 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 		F3E85D1B2B4E9C3500419DB6 /* SearchBarVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarVIew.swift; sourceTree = "<group>"; };
 		F3E85D1D2B4EA0F000419DB6 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		F3E85D402B593A4D0073E5D9 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		F3EB8E252B53C1B600F91915 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		F3F0D57A2B49201C002D5F88 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F3F0D5802B4920DF002D5F88 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				F375F4672B4A7EBD003D0DFA /* NetworkManager.swift */,
 				F3E85D172B4E904A00419DB6 /* LocalFileManager.swift */,
+				F3E85D402B593A4D0073E5D9 /* HapticManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			files = (
 				F3A1EBAE2B522987003D4DFB /* Statistic.swift in Sources */,
 				F37F85CD2B550099007C3002 /* PortfolioDataService.swift in Sources */,
+				F3E85D412B593A4D0073E5D9 /* HapticManager.swift in Sources */,
 				F34ADE202B53E05A0046C143 /* CoinLogoView.swift in Sources */,
 				F3F699782B4D9C86005BD7EA /* CoinImageView.swift in Sources */,
 				F375F4682B4A7EBD003D0DFA /* NetworkManager.swift in Sources */,

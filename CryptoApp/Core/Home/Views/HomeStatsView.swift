@@ -25,7 +25,11 @@ struct HomeStatsView: View {
     }
 }
 
-#Preview {
-    HomeStatsView(showPortfolio: .constant(false))
-        .environmentObject(DeveloperPreview.instance.homeVm )
+struct HomeStatsView_Previews: PreviewProvider {
+    static var previews: some View {
+        
+        HomeStatsView(showPortfolio: .constant(false))
+            .environmentObject(DeveloperPreview.instance.homeVm )
+        
+    }
 }

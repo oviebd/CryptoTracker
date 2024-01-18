@@ -38,6 +38,10 @@ struct StatisticView: View {
     }
 }
 
-#Preview {
-    StatisticView(statData: DeveloperPreview.instance.stat3)
+struct StatisticView_Previews: PreviewProvider {
+    static var previews: some View {
+        
+        StatisticView(statData: DeveloperPreview.instance.stat3)
+        
+    }
 }

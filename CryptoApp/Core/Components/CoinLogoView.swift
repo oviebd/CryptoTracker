@@ -35,6 +35,10 @@ struct CoinLogoView: View {
     }
 }
 
-#Preview {
-    CoinLogoView(coin: DeveloperPreview.instance.coin)
+struct CoinLogoView_Previews: PreviewProvider {
+    static var previews: some View {
+        
+        CoinLogoView(coin: DeveloperPreview.instance.coin)
+        
+    }
 }
