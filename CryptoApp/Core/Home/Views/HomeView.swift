@@ -31,13 +31,37 @@ struct HomeView: View {
                 
                 HStack{
                     
-                    Text("Coin")
+                    HStack(spacing: 4) {
+                        Text("Coin")
+                        Image(systemName: "chevron.down")
+                            .opacity(getRankSortImageOpacity())
+                            .rotationEffect( Angle(degrees: getRotationOfRankSortImage()))
+                    }.onTapGesture {
+                        withAnimation(.default){
+                            vm.sortOption = (vm.sortOption == .rank) ? .rankReversed : .rank
+                        }
+                    }
+                    
+                  
                     Spacer()
                     if showPortfolio {
-                        Text("Holdings")
+                        
+                        HStack(spacing: 4) {
+                            Text("Holdings")
+                            Image(systemName: "chevron.down")
+                                .opacity(getHoldingsSortImageOpacity())
+                                .rotationEffect( Angle(degrees: getRotationOfHoldingsSortImage()))
+                                
+                        }.onTapGesture {
+                            withAnimation(.default){
+                                vm.sortOption = (vm.sortOption == .holdings) ? .holdingsReversed : .holdings
+                            }
+                        }
+                                            
                         Spacer()
                     }
                 
+                    
                     Button(action: {
                         withAnimation(.linear(duration: 2.0)) {
                             vm.reloadData()
@@ -46,7 +70,18 @@ struct HomeView: View {
                         Image(systemName: "goforward")
                     })
                     .rotationEffect(Angle(degrees: vm.isLoading ? 360 : 0), anchor: .center)
-                    Text("Price")
+                    
+                    HStack(spacing: 4) {
+                        Text("Price")
+                        Image(systemName: "chevron.down")
+                            .opacity(getPriceSortImageOpacity())
+                            .rotationEffect( Angle(degrees: getRotationOfPriceSortImage()))
+                    }.onTapGesture {
+                        withAnimation(.default){
+                            vm.sortOption = (vm.sortOption == .price) ? .priceReversed : .price
+                        }
+                    }
+                  
                      
                 }.font(.caption)
                     .foregroundColor(Color.theme.secondaryText)
@@ -66,6 +101,31 @@ struct HomeView: View {
                 Spacer(minLength: 0)
             }
         }
+    }
+    
+    
+    func getRankSortImageOpacity() -> Double {
+        return (vm.sortOption == .rank || vm.sortOption == .rankReversed) ? 1.0 : 0.0
+    }
+    
+    func getHoldingsSortImageOpacity() -> Double {
+        return (vm.sortOption == .holdings || vm.sortOption == .holdingsReversed) ? 1.0 : 0.0
+    }
+    
+    func getPriceSortImageOpacity() -> Double {
+        return (vm.sortOption == .price || vm.sortOption == .priceReversed) ? 1.0 : 0.0
+    }
+    
+    func getRotationOfRankSortImage() -> Double {
+        return vm.sortOption == .rank ? 0 : 180
+    }
+    
+    func getRotationOfHoldingsSortImage() -> Double {
+        return vm.sortOption == .holdings ? 0 : 180
+    }
+    
+    func getRotationOfPriceSortImage() -> Double {
+        return vm.sortOption == .price ? 0 : 180
     }
 }
 
