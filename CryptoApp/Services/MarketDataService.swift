@@ -9,8 +9,8 @@ import Combine
 import Foundation
 
 class MarketDataService {
+    
     @Published var marketData: MarketDataModel? = nil
-
     var marketDataSubscription: AnyCancellable?
 
     init() {
