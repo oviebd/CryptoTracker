@@ -37,11 +37,11 @@ struct ChartView: View {
                 .frame(height: 200)
                 .background(chartBg)
                 .overlay(alignment: .leading, content: {
-                    chartYAxisOverlay.padding(.horizontal,4)
+                    chartYAxisOverlay.padding(.horizontal,10)
                 })
 
             chatDateLabel
-                .padding(.horizontal,4)
+                .padding(.horizontal,10)
         }
         .font(.caption)
         .foregroundColor(Color.theme.secondaryText)

@@ -14,6 +14,10 @@ class DetailsViewModel: ObservableObject {
     @Published var overviewStatistics: [Statistic] = [Statistic]()
     @Published var additionalStatistics: [Statistic] = [Statistic]()
 
+    @Published var coinDescription: String? = nil
+    @Published var websiteUrl: String? = nil
+    @Published var redditUrl: String? = nil
+
     private var cancellables = Set<AnyCancellable>()
 
     init(coin: CoinModel) {
@@ -29,7 +33,14 @@ class DetailsViewModel: ObservableObject {
             .sink { [weak self] overViewStats, additionalStats in
                 self?.overviewStatistics = overViewStats
                 self?.additionalStatistics = additionalStats
-            }.store(in: &cancellables )
+            }.store(in: &cancellables)
+
+        coinDetailsDataService.$coinDetails
+            .sink { [weak self] detailsData in
+                self?.coinDescription = detailsData?.readableDescription
+                self?.websiteUrl = detailsData?.links?.homepage?.first
+                self?.redditUrl = detailsData?.links?.subredditURL
+            }.store(in: &cancellables)
     }
 
     func mapDataToStatistics(coinDetailsModel: CoinDetailsModel?, coinModel: CoinModel) -> (overview: [Statistic], additional: [Statistic]) {

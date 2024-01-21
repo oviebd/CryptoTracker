@@ -14,6 +14,7 @@ struct CoinRowView: View {
     var body: some View {
         HStack(spacing: 0) {
             leftColumn
+                .frame(width: UIScreen.main.bounds.width/3)
 
             Spacer()
 
@@ -54,12 +55,13 @@ extension CoinRowView {
                 .font(.headline)
                 .padding(.leading, 6)
                 .foregroundColor(Color.theme.accent)
+                .lineLimit(1)
         }
     }
 
     private var middleColumn: some View {
         VStack(alignment: .leading) {
-            Text(coin.currentHoldingsValue.asCurrencyWith2Decimals())
+            Text(coin.currentHoldingsValue.asCurrencyWith6Decimals())
                 .bold()
                 .foregroundColor(Color.theme.accent)
 
@@ -71,7 +73,7 @@ extension CoinRowView {
 
     private var rightColumn: some View {
         VStack(alignment: .trailing) {
-            Text(coin.currentPrice.asCurrencyWith2Decimals())
+            Text(coin.currentPrice.asCurrencyWith6Decimals())
                 .bold()
                 .foregroundColor(Color.theme.accent)
 

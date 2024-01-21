@@ -229,8 +229,8 @@
 		F3F0D57C2B4920B3002D5F88 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				7BE7C48C2B598A19002F68FF /* Details */,
 				F3F0D5822B4921BC002D5F88 /* Components */,
+				7BE7C48C2B598A19002F68FF /* Details */,
 				F3F0D57D2B4920BB002D5F88 /* Home */,
 			);
 			path = Core;
