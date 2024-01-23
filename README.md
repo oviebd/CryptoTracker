@@ -16,6 +16,5 @@ CryptoTracker is a dynamic application designed to fetch real-time data on crypt
 - **Modern Technologies:** Leveraging the cutting-edge Combine framework and UI animations for a smooth and engaging user experience.
 
 <p align="center">
-<img src="https://github.com/oviebd/CryptoTracker/blob/main/AppGraphics/details_dark.png" width="258"/>
-<img src="https://github.com/oviebd/CryptoTracker/blob/main/AppGraphics/graph_light_02.png" width="258"/>
+<img src="https://github.com/oviebd/CryptoTracker/blob/main/AppGraphics/app_all_screens.png" width="1024"/>
 </p>
